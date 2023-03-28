@@ -100,7 +100,8 @@
         <!-- **************************************************************** -->
         <maven.build.timestamp.format>yyyy-MMM-dd HH:mm:ss</maven.build.timestamp.format>
         <!-- **************************************************************** -->
-
+	<sonar.organization>samq-research</sonar.organization>
+	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <!-- Java Properties -->
         <java.source.version>1.7</java.source.version>
         <java.target.version>1.7</java.target.version>
