@@ -23,3 +23,16 @@ jobs:
           ls -a
           echo Start Mend CLI scan
           mend sast --java-engine-generation 2
+      - name: 'Upload Mend CLI folder'
+        uses: actions/upload-artifact@v3
+        with:
+          name: MendCLI
+          path: ~/.mend
+          retention-days: 1
+      - name: 'Upload Mend CLI folder if failure'
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: MendCLi
+          path: ~/.mend
+          retention-days: 1
