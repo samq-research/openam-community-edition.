@@ -8,6 +8,7 @@ jobs:
     name: Mend Scan
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Mend CLI Scan
         env:
           MEND_SAST_SERVER_URL: https://saas.mend.io/sast
