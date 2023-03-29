@@ -15,6 +15,9 @@ jobs:
           MEND_SAST_ORGANIZATION: ${{secrets.MEND_SAST_ORGANIZATION}}
         run: |
           echo Downloading Mend CLI
-          curl -LJO https://downloads.mend.io/production/unified/latest/linux_amd64/mend && chmod +x mend
+          sudo curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && sudo chmod +x /usr/local/bin/mend
+          pwd
+          echo "showing ls -a"
+          ls -a
           echo Start Mend CLI scan
-          ./mend sast --java-engine-generation 2
+          mend sast --java-engine-generation 2
