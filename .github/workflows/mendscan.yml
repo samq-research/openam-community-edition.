@@ -19,8 +19,6 @@ jobs:
           echo Downloading Mend CLI
           sudo curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && sudo chmod +x /usr/local/bin/mend
           pwd
-          echo "showing ls -a"
-          ls -a
           echo Start Mend CLI scan
           mend sast --java-engine-generation 2
       - name: 'Upload Mend CLI folder'
